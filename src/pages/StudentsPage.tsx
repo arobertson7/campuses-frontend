@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import type { Student } from '../types';
 
-// Mock campuses names map to resolve campus names visually
+// REMOVE LATER: Mock campuses names map to resolve campus names visually
 const MOCK_CAMPUSES: Record<number, string> = {
   1: "Brooklyn College",
   2: "Queens College",
   3: "Hunter College"
 };
 
-// Mock students matching the Student interface from types.ts
+// REMOVE LATER: Mock students matching the Student interface from types.ts
 const MOCK_STUDENTS: Student[] = [
   {
     id: 1,
