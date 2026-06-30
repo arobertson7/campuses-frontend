@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from "@tanstack/react-query";
-import { fetchStudents } from '../api';
+import { fetchAllStudents } from '../api';
 
 // REMOVE LATER: Mock campuses names map to resolve campus names visually
 const MOCK_CAMPUSES: Record<number, string> = {
@@ -12,7 +12,7 @@ const MOCK_CAMPUSES: Record<number, string> = {
 export default function StudentsPage() {
   const { data: students, isLoading, isError, error, refetch } = useQuery({
     queryKey: ["students"],
-    queryFn: fetchStudents
+    queryFn: fetchAllStudents
   });
 
   return (
