@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Student } from '../types';
+import { useQuery } from "@tanstack/react-query";
+import { fetchStudents } from '../api';
 
 // REMOVE LATER: Mock campuses names map to resolve campus names visually
 const MOCK_CAMPUSES: Record<number, string> = {
@@ -66,6 +68,14 @@ const MOCK_STUDENTS: Student[] = [
 ];
 
 export default function StudentsPage() {
+  // COMMENTED FOR NOW BECAUSE LINTER IS GIVING ERROR FOR NOT USING DESTRUCURED ELEMENTS
+  // const { data: students, isLoading, isError, error } = useQuery({
+  //   queryKey: ["students"],
+  //   queryFn: fetchStudents
+  // });
+
+  // NEXT STEP IS TO ADD DIFFERENT SECTION BELOW FOR ISLOADING, ISERROR, ETC. (https://github.com/Sourya17/csci39548-summer2026/blob/main/demos/tanstack-query/snapshots/snapshot-01-usequery/src/App.tsx)
+
   return (
     <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 space-y-12">
       {/* Centered Page Header */}
