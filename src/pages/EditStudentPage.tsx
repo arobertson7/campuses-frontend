@@ -350,8 +350,9 @@ export default function EditStudentPage() {
               type="button"
               className="w-full sm:w-auto px-5 py-2.5 bg-red-50 hover:bg-red-100 dark:bg-red-950/20 dark:hover:bg-red-950/30 text-red-600 dark:text-red-400 text-sm font-semibold rounded-xl transition-colors duration-150 order-last sm:order-first"
               onClick={() => deleteMutation.mutate()}
+              disabled={deleteMutation.isPending}
             >
-              Delete Student
+              {deleteMutation.isPending ? "Deleting..." : "Delete Student"}
             </button>
             <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-3">
               <Link
@@ -363,8 +364,9 @@ export default function EditStudentPage() {
               <button
                 type="submit"
                 className="w-full sm:w-auto px-6 py-2.5 bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-sm font-semibold text-white rounded-xl shadow-sm transition-colors duration-150"
+                disabled={editMutation.isPending}
               >
-                Save Changes
+                {editMutation.isPending ? "Updating..." : "Save Changes"}
               </button>
             </div>
           </div>
