@@ -11,6 +11,7 @@ interface FormErrors {
   gpa?: string;
 }
 
+// regular expression for validating email format
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function AddStudentPage() {
@@ -30,6 +31,7 @@ export default function AddStudentPage() {
     queryFn: fetchAllCampuses,
   });
 
+  // tanstack query write handling
   const addMutation = useMutation({
     mutationFn: addStudent,
     onSuccess: (newStudent) => {
@@ -38,6 +40,7 @@ export default function AddStudentPage() {
     },
   });
 
+  // input validation
   function validate(): boolean {
     const newErrors: FormErrors = {};
 
