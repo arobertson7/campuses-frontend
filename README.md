@@ -10,3 +10,23 @@ The application is a clean, single-page dashboard featuring:
 - **Relational CRUD Dashboard:** Oversees linked databases for campuses and students, supporting complex enrollment relationships, registry profile grids, and dynamic visual fallbacks.
 
 It is built using React, Vite, TypeScript, and Tailwind CSS (powered by TanStack Query for state sync and React Router for client-side view management, deployed on Vercel).
+
+Deployed URL: https://frontend-nine-ruby-27.vercel.app/
+
+## How to Run Locally
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Configure environment variables:**
+   Create a `.env` file and set the `VITE_API_URL` variable (http://localhost:3667 when running backend locally as well) (see `.env.example`):
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
